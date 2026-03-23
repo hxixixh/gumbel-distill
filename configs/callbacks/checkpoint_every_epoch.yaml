@@ -1,0 +1,9 @@
+checkpoint_every_epoch:
+  _target_: lightning.pytorch.callbacks.ModelCheckpoint
+  save_top_k: -1 # Saves a checkpoint for every epoch.
+  save_last: True # Also saves a 'last.ckpt' file.
+  dirpath: ${checkpointing.save_dir}/checkpoints
+  verbose: True
+  auto_insert_metric_name: False
+  every_n_epochs: 1 # <-- This is the key change to save every epoch.
+  every_n_train_steps: null # Disable saving every n train steps since we are saving every epoch.
