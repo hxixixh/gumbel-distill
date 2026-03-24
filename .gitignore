@@ -175,3 +175,5 @@ logs/
 data
 pretrained_models/
 checkpoints/
+upload_to_hf.py
+upload_to_hf.py

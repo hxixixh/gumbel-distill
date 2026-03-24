@@ -91,6 +91,38 @@ bash scripts/train/train_owt_bd3lms.sh
 bash scripts/train/train_owt_bd3lms_gumbel.sh
 ```
 
+## 📦 Checkpoints
+
+We release pretrained checkpoints on HuggingFace: [hxixixh/gumbel-distillation-models](https://huggingface.co/hxixixh/gumbel-distillation-models)
+
+| Model | Dataset | Filename |
+|-------|---------|----------|
+| MDLM | OpenWebText | `mdlm-owt.ckpt` |
+| MDLM + Gumbel Distillation | OpenWebText | `mdlm-gumbel-owt.ckpt` |
+| BD3-LM | OpenWebText | `bd3lms-owt.ckpt` |
+| BD3-LM + Gumbel Distillation | OpenWebText | `bd3lms-gumbel-owt.ckpt` |
+
+To download the checkpoints:
+
+```bash
+# Install huggingface_hub if needed
+pip install huggingface_hub
+
+# Download all checkpoints
+huggingface-cli download hxixixh/gumbel-distillation-models --local-dir ./checkpoints
+
+# Or download a specific checkpoint
+huggingface-cli download hxixixh/gumbel-distillation-models mdlm-gumbel-owt.ckpt --local-dir ./checkpoints
+```
+
+Then use the checkpoint for evaluation, e.g.:
+
+```bash
+python main_gumbel.py \
+    eval.checkpoint_path=./checkpoints/mdlm-gumbel-owt.ckpt \
+    ...
+```
+
 ## 📊 Evaluation (Generative Perplexity & MAUVE)
 
 After training, you can use the evaluation scripts to compute Generative PPL and generate samples. Scripts are located in `scripts/gen_ppl/`.
