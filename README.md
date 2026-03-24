@@ -3,7 +3,7 @@
 [![Conference](https://img.shields.io/badge/ICLR-2026-blue.svg)](https://iclr.cc/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This repository contains the official implementation of the paper **[Gumbel Distillation for Parallel Text Generation](#)**, published at **ICLR 2025**.
+This repository contains the official implementation of the paper **[Gumbel Distillation for Parallel Text Generation](#)**, published at **ICLR 2026**.
 
 > **Authors**: Chi Zhang*, Xixi Hu*, Bo Liu, Qiang Liu <br>
 > *Department of Computer Science, The University of Texas at Austin*
@@ -148,10 +148,10 @@ bash scripts/gen_ppl/genppl_owt_bd3lms_gumbel.sh
 If you find our work helpful or use our code in your research, please consider citing our paper:
 
 ```bibtex
-@inproceedings{zhang2025gumbel,
+@inproceedings{zhang2026gumbel,
   title={Gumbel Distillation for Parallel Text Generation},
   author={Zhang, Chi and Hu, Xixi and Liu, Bo and Liu, Qiang},
   booktitle={The Fourteenth International Conference on Learning Representations (ICLR)},
-  year={2025}
+  year={2026}
 }
 ```
